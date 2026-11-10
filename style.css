@@ -1,0 +1,76 @@
+/* basic page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* cards layout - using flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* one card */
+.card {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.price {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* tablet - 2 per row */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+/* mobile - 1 per row */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
